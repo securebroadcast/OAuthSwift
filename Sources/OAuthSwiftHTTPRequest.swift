@@ -72,9 +72,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
         }
 
         OAuthSwiftHTTPRequest.executionContext {
-            // perform lock here to prevent cancel calls on another thread while creating the request
-            objc_sync_enter(self)
-            defer { objc_sync_exit(self) }
+
             if self.cancelRequested {
                 return
             }
@@ -178,9 +176,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
     }
 
     open func cancel() {
-        // perform lock here to prevent cancel calls on another thread while creating the request
-        objc_sync_enter(self)
-        defer { objc_sync_exit(self) }
+
         // either cancel the request if it's already running or set the flag to prohibit creation of the request
         if let task = task {
             task.cancel()
