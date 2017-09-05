@@ -208,6 +208,34 @@
 			remoteGlobalIDString = FCC5372B1F5F36EE00224DC4;
 			remoteInfo = CommonCrypto;
 		};
+		FCC537501F5F491F00224DC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F451E3BD195B8CD80051434C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCC5372B1F5F36EE00224DC4;
+			remoteInfo = CommonCrypto;
+		};
+		FCC537521F5F492300224DC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F451E3BD195B8CD80051434C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCC5372B1F5F36EE00224DC4;
+			remoteInfo = CommonCrypto;
+		};
+		FCC537541F5F492700224DC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F451E3BD195B8CD80051434C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCC5372B1F5F36EE00224DC4;
+			remoteInfo = CommonCrypto;
+		};
+		FCC537561F5F492B00224DC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F451E3BD195B8CD80051434C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCC5372B1F5F36EE00224DC4;
+			remoteInfo = CommonCrypto;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -714,6 +742,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FCC537571F5F492B00224DC4 /* PBXTargetDependency */,
 			);
 			name = OAuthSwiftWatchOS;
 			productName = OAuthSwiftWatchOS;
@@ -733,6 +762,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FCC537531F5F492300224DC4 /* PBXTargetDependency */,
 			);
 			name = OAuthSwiftOSX;
 			productName = OAuthSwiftOSX;
@@ -769,6 +799,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FCC537551F5F492700224DC4 /* PBXTargetDependency */,
 			);
 			name = OAuthSwiftTVOS;
 			productName = OAuthSwiftTVOS;
@@ -810,6 +841,7 @@
 				F4E9A4D81A67940200B4F3C8 /* PBXBuildRule */,
 			);
 			dependencies = (
+				FCC537511F5F491F00224DC4 /* PBXTargetDependency */,
 			);
 			name = OAuthSwift;
 			productName = OAuthSwift;
@@ -1325,6 +1357,26 @@
 			isa = PBXTargetDependency;
 			target = FCC5372B1F5F36EE00224DC4 /* CommonCrypto */;
 			targetProxy = FCC5373F1F5F36EF00224DC4 /* PBXContainerItemProxy */;
+		};
+		FCC537511F5F491F00224DC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCC5372B1F5F36EE00224DC4 /* CommonCrypto */;
+			targetProxy = FCC537501F5F491F00224DC4 /* PBXContainerItemProxy */;
+		};
+		FCC537531F5F492300224DC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCC5372B1F5F36EE00224DC4 /* CommonCrypto */;
+			targetProxy = FCC537521F5F492300224DC4 /* PBXContainerItemProxy */;
+		};
+		FCC537551F5F492700224DC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCC5372B1F5F36EE00224DC4 /* CommonCrypto */;
+			targetProxy = FCC537541F5F492700224DC4 /* PBXContainerItemProxy */;
+		};
+		FCC537571F5F492B00224DC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCC5372B1F5F36EE00224DC4 /* CommonCrypto */;
+			targetProxy = FCC537561F5F492B00224DC4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
