@@ -5,7 +5,9 @@
 //  Created by Dongri Jin on 6/22/14.
 //  Copyright (c) 2014 Dongri Jin. All rights reserved.
 //
+
 import Foundation
+import CommonCrypto
 
 /// Allow to customize computed headers
 public protocol OAuthSwiftCredentialHeadersFactory {
@@ -252,4 +254,27 @@ open class OAuthSwiftCredential: NSObject, NSCoding {
         // If no expires date is available we assume the token is still valid since it doesn't have an expiration date to check with.
         return false
     }
+}
+
+
+extension String {
+  
+  func urlencode() -> String {
+    let stringToEncode = self.replacingOccurrences(of: " ", with: "+")
+    return stringToEncode.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed)!
+  }
+  
+  func hmacsha1(key: String) -> Data {
+    let dataToDigest = self.data(using: String.Encoding.utf8)
+    let keyData = key.data(using: String.Encoding.utf8)
+    
+    let digestLength = Int(CC_SHA1_DIGEST_LENGTH)
+    let result = UnsafeMutablePointer<Any>.allocate(capacity: digestLength)
+    
+    CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA1), (keyData! as NSData).bytes, keyData!.count, (dataToDigest! as NSData).bytes, dataToDigest!.count, result)
+    
+    return Data(bytes: result, count: digestLength)
+    
+  }
+  
 }
