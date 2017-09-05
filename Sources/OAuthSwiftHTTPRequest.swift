@@ -401,7 +401,15 @@ public struct URLSessionFactory {
     public static let `default` = URLSessionFactory()
 
     public var configuration = URLSessionConfiguration.default
-    public var queue = OperationQueue.main
+    
+    public lazy var queue: OperationQueue = {
+      var queue = OperationQueue()
+      queue.name = "UploadQueue"
+      queue.maxConcurrentOperationCount = 5
+      return queue
+    }()
+  
+  
     /// An optional delegate for the URLSession
     public weak var delegate: URLSessionDelegate?
 
