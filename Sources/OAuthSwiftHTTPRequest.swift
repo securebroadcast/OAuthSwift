@@ -39,7 +39,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
     fileprivate var cancelRequested = false
 
     open static var executionContext: (@escaping () -> Void) -> Void = { block in
-        return DispatchQueue.main.async(execute: block)
+      return DispatchQueue.global(qos: .background).async(execute: block)
     }
 
     // MARK: INIT
