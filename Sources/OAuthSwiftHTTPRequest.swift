@@ -289,7 +289,7 @@ extension OAuthSwiftHTTPRequest {
         public var parameters: OAuthSwift.Parameters
         public let paramsLocation: ParamsLocation
         public let dataEncoding: String.Encoding
-        public let sessionFactory: URLSessionFactory
+        public var sessionFactory: URLSessionFactory
 
         /// Shortcut
         public var httpMethod: Method {
@@ -417,7 +417,7 @@ public struct URLSessionFactory {
     public var isNetworkActivityIndicatorVisible = true
 
     /// Create a new URLSession
-    func build() -> URLSession {
+    mutating func build() -> URLSession {
         return URLSession(configuration: self.configuration, delegate: self.delegate, delegateQueue: self.queue)
     }
 }
