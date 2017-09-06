@@ -145,12 +145,10 @@
 		F4E9A4DF1A67944C00B4F3C8 /* OAuthSwiftCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = F435026B1A6790EC00038A29 /* OAuthSwiftCredential.swift */; };
 		F4E9A4E01A67944C00B4F3C8 /* OAuthSwiftHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F435026C1A6790EC00038A29 /* OAuthSwiftHTTPRequest.swift */; };
 		F4E9A8011B08635E0003988B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F451E3E4195B8D030051434C /* Images.xcassets */; };
-		FCC537351F5F36EE00224DC4 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC5372C1F5F36EE00224DC4 /* CommonCrypto.framework */; };
-		FCC5373C1F5F36EF00224DC4 /* CommonCryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC5373B1F5F36EF00224DC4 /* CommonCryptoTests.swift */; };
-		FCC5373E1F5F36EF00224DC4 /* CommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC5372E1F5F36EE00224DC4 /* CommonCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCC537411F5F36EF00224DC4 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC5372C1F5F36EE00224DC4 /* CommonCrypto.framework */; };
-		FCC537421F5F36EF00224DC4 /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCC5372C1F5F36EE00224DC4 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FCC5374F1F5F3BD000224DC4 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC5372C1F5F36EE00224DC4 /* CommonCrypto.framework */; };
+		FCC537591F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC537581F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift */; };
+		FCC5375A1F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC537581F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift */; };
+		FCC5375B1F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC537581F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift */; };
+		FCC5375C1F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC537581F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -187,55 +185,6 @@
 			remoteGlobalIDString = F43502791A6791B200038A29;
 			remoteInfo = OAuthSwift;
 		};
-		FCC537361F5F36EE00224DC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F451E3BD195B8CD80051434C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCC5372B1F5F36EE00224DC4;
-			remoteInfo = CommonCrypto;
-		};
-		FCC537381F5F36EF00224DC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F451E3BD195B8CD80051434C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F451E3C4195B8CD80051434C;
-			remoteInfo = OAuthSwiftDemo;
-		};
-		FCC5373F1F5F36EF00224DC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F451E3BD195B8CD80051434C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCC5372B1F5F36EE00224DC4;
-			remoteInfo = CommonCrypto;
-		};
-		FCC537501F5F491F00224DC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F451E3BD195B8CD80051434C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCC5372B1F5F36EE00224DC4;
-			remoteInfo = CommonCrypto;
-		};
-		FCC537521F5F492300224DC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F451E3BD195B8CD80051434C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCC5372B1F5F36EE00224DC4;
-			remoteInfo = CommonCrypto;
-		};
-		FCC537541F5F492700224DC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F451E3BD195B8CD80051434C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCC5372B1F5F36EE00224DC4;
-			remoteInfo = CommonCrypto;
-		};
-		FCC537561F5F492B00224DC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F451E3BD195B8CD80051434C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCC5372B1F5F36EE00224DC4;
-			remoteInfo = CommonCrypto;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -245,7 +194,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FCC537421F5F36EF00224DC4 /* CommonCrypto.framework in Embed Frameworks */,
 				F42F57D91A67F2040064249F /* OAuthSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -327,18 +275,7 @@
 		F490AA271A67EA7D00765D10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F490AA291A67EAE900765D10 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F4C1D03C1A8A5D5000CAF356 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		FCC5372C1F5F36EE00224DC4 /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCC5372E1F5F36EE00224DC4 /* CommonCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonCrypto.h; sourceTree = "<group>"; };
-		FCC5372F1F5F36EE00224DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCC537341F5F36EE00224DC4 /* CommonCryptoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommonCryptoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCC5373B1F5F36EF00224DC4 /* CommonCryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonCryptoTests.swift; sourceTree = "<group>"; };
-		FCC5373D1F5F36EF00224DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCC537491F5F371100224DC4 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
-		FCC5374A1F5F37F800224DC4 /* iphoneos.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = iphoneos.modulemap; sourceTree = "<group>"; };
-		FCC5374B1F5F37F800224DC4 /* iphonesimulator.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = iphonesimulator.modulemap; sourceTree = "<group>"; };
-		FCC5374C1F5F37F800224DC4 /* macosx.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = macosx.modulemap; sourceTree = "<group>"; };
-		FCC5374D1F5F37F800224DC4 /* watchos.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = watchos.modulemap; sourceTree = "<group>"; };
-		FCC5374E1F5F37F800224DC4 /* watchsimulator.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = watchsimulator.modulemap; sourceTree = "<group>"; };
+		FCC537581F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftSha1SigningProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,7 +322,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC5374F1F5F3BD000224DC4 /* CommonCrypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,23 +329,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC537411F5F36EF00224DC4 /* CommonCrypto.framework in Frameworks */,
 				F422B2D91A67B2A20060A70F /* OAuthSwift.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCC537281F5F36EE00224DC4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCC537311F5F36EE00224DC4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FCC537351F5F36EE00224DC4 /* CommonCrypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,16 +517,11 @@
 				C496246E1B00D6C30010BD09 /* OAuthWebViewController.swift */,
 				D20BBB741C2454A900F2B012 /* OAuthSwiftMultipartData.swift */,
 				F47599AE1A78FFAF004A96C1 /* Utils.swift */,
+				FCC537581F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift */,
 				F47599AC1A78FF23004A96C1 /* SHA1.swift */,
 				F47599B21A7901DF004A96C1 /* HMAC.swift */,
 				C4F6FE7C1DCE3AC300C0B62A /* Objc.swift */,
-				FCC5374A1F5F37F800224DC4 /* iphoneos.modulemap */,
-				FCC5374B1F5F37F800224DC4 /* iphonesimulator.modulemap */,
-				FCC5374C1F5F37F800224DC4 /* macosx.modulemap */,
-				FCC5374D1F5F37F800224DC4 /* watchos.modulemap */,
-				FCC5374E1F5F37F800224DC4 /* watchsimulator.modulemap */,
 				C49624741B00F8240010BD09 /* Extensions */,
-				FCC537491F5F371100224DC4 /* CommonCrypto.xcconfig */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -626,8 +541,6 @@
 				F435027B1A6791B200038A29 /* Sources */,
 				C499735E1DA5674200583191 /* Demo */,
 				C4D50DF81BFB693F0053B624 /* Tests */,
-				FCC5372D1F5F36EE00224DC4 /* CommonCrypto */,
-				FCC5373A1F5F36EF00224DC4 /* CommonCryptoTests */,
 				F451E3C6195B8CD80051434C /* Products */,
 				C499735D1DA566B400583191 /* Xcode */,
 				35741230A135FD687D2F5317 /* Frameworks */,
@@ -645,8 +558,6 @@
 				C4B6EE1E1BF74CE300443596 /* OAuthSwift.framework */,
 				C4D50DF71BFB693F0053B624 /* OAuthSwiftTests.xctest */,
 				C40890C01C11B37000E3146A /* OAuthSwift.framework */,
-				FCC5372C1F5F36EE00224DC4 /* CommonCrypto.framework */,
-				FCC537341F5F36EE00224DC4 /* CommonCryptoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -664,24 +575,6 @@
 				C4E038A51BF4B92A007CECEA /* Services.plist */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		FCC5372D1F5F36EE00224DC4 /* CommonCrypto */ = {
-			isa = PBXGroup;
-			children = (
-				FCC5372E1F5F36EE00224DC4 /* CommonCrypto.h */,
-				FCC5372F1F5F36EE00224DC4 /* Info.plist */,
-			);
-			path = CommonCrypto;
-			sourceTree = "<group>";
-		};
-		FCC5373A1F5F36EF00224DC4 /* CommonCryptoTests */ = {
-			isa = PBXGroup;
-			children = (
-				FCC5373B1F5F36EF00224DC4 /* CommonCryptoTests.swift */,
-				FCC5373D1F5F36EF00224DC4 /* Info.plist */,
-			);
-			path = CommonCryptoTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -719,14 +612,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCC537291F5F36EE00224DC4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FCC5373E1F5F36EF00224DC4 /* CommonCrypto.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -742,7 +627,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FCC537571F5F492B00224DC4 /* PBXTargetDependency */,
 			);
 			name = OAuthSwiftWatchOS;
 			productName = OAuthSwiftWatchOS;
@@ -762,7 +646,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FCC537531F5F492300224DC4 /* PBXTargetDependency */,
 			);
 			name = OAuthSwiftOSX;
 			productName = OAuthSwiftOSX;
@@ -799,7 +682,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FCC537551F5F492700224DC4 /* PBXTargetDependency */,
 			);
 			name = OAuthSwiftTVOS;
 			productName = OAuthSwiftTVOS;
@@ -841,7 +723,6 @@
 				F4E9A4D81A67940200B4F3C8 /* PBXBuildRule */,
 			);
 			dependencies = (
-				FCC537511F5F491F00224DC4 /* PBXTargetDependency */,
 			);
 			name = OAuthSwift;
 			productName = OAuthSwift;
@@ -861,49 +742,11 @@
 			);
 			dependencies = (
 				F42F57DB1A67F2040064249F /* PBXTargetDependency */,
-				FCC537401F5F36EF00224DC4 /* PBXTargetDependency */,
 			);
 			name = OAuthSwiftDemo;
 			productName = OAuthSwift;
 			productReference = F451E3C5195B8CD80051434C /* OAuthSwiftDemo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		FCC5372B1F5F36EE00224DC4 /* CommonCrypto */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FCC537431F5F36EF00224DC4 /* Build configuration list for PBXNativeTarget "CommonCrypto" */;
-			buildPhases = (
-				FCC537271F5F36EE00224DC4 /* Sources */,
-				FCC537281F5F36EE00224DC4 /* Frameworks */,
-				FCC537291F5F36EE00224DC4 /* Headers */,
-				FCC5372A1F5F36EE00224DC4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CommonCrypto;
-			productName = CommonCrypto;
-			productReference = FCC5372C1F5F36EE00224DC4 /* CommonCrypto.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		FCC537331F5F36EE00224DC4 /* CommonCryptoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FCC537461F5F36EF00224DC4 /* Build configuration list for PBXNativeTarget "CommonCryptoTests" */;
-			buildPhases = (
-				FCC537301F5F36EE00224DC4 /* Sources */,
-				FCC537311F5F36EE00224DC4 /* Frameworks */,
-				FCC537321F5F36EE00224DC4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FCC537371F5F36EE00224DC4 /* PBXTargetDependency */,
-				FCC537391F5F36EF00224DC4 /* PBXTargetDependency */,
-			);
-			name = CommonCryptoTests;
-			productName = CommonCryptoTests;
-			productReference = FCC537341F5F36EE00224DC4 /* CommonCryptoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -942,15 +785,6 @@
 					F451E3C4195B8CD80051434C = {
 						CreatedOnToolsVersion = 6.0;
 					};
-					FCC5372B1F5F36EE00224DC4 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-					};
-					FCC537331F5F36EE00224DC4 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = F451E3C4195B8CD80051434C;
-					};
 				};
 			};
 			buildConfigurationList = F451E3C0195B8CD80051434C /* Build configuration list for PBXProject "OAuthSwift" */;
@@ -974,8 +808,6 @@
 				F451E3C4195B8CD80051434C /* OAuthSwiftDemo */,
 				C49FD5231AFB5DF500791E1A /* OAuthSwiftOSXDemo */,
 				C4D50DF61BFB693F0053B624 /* OAuthSwiftTests */,
-				FCC5372B1F5F36EE00224DC4 /* CommonCrypto */,
-				FCC537331F5F36EE00224DC4 /* CommonCryptoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1037,20 +869,6 @@
 				C47F53A01DB6207600B4978A /* Main.storyboard in Resources */,
 				F490AA261A67EA7D00765D10 /* InfoPlist.strings in Resources */,
 				C47F539F1DB6207600B4978A /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCC5372A1F5F36EE00224DC4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCC537321F5F36EE00224DC4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1169,6 +987,7 @@
 				C4E46C4F1D462D4B00BFCEF4 /* NSError+OAuthSwift.swift in Sources */,
 				C40890D51C11B38700E3146A /* Data+OAuthSwift.swift in Sources */,
 				C40890CF1C11B38000E3146A /* Utils.swift in Sources */,
+				FCC5375C1F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1198,6 +1017,7 @@
 				C4E46C4D1D462D4B00BFCEF4 /* NSError+OAuthSwift.swift in Sources */,
 				C48B28291AFA599A00C7DEF6 /* Dictionary+OAuthSwift.swift in Sources */,
 				C49624701B00D6C30010BD09 /* OAuthWebViewController.swift in Sources */,
+				FCC5375A1F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1237,6 +1057,7 @@
 				C4B6EE311BF74CF400443596 /* URL+OAuthSwift.swift in Sources */,
 				C423499B1DCCE5F600BD980F /* OAuthSwiftResponse.swift in Sources */,
 				C4B6EE321BF74CF400443596 /* String+OAuthSwift.swift in Sources */,
+				FCC5375B1F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift in Sources */,
 				C4B6EE331BF74CF400443596 /* Data+OAuthSwift.swift in Sources */,
 				C42D41BD1C1AD11600DEDF53 /* UIApplication+OAuthSwift.swift in Sources */,
 				C4B6EE341BF74CF400443596 /* Int+OAuthSwift.swift in Sources */,
@@ -1288,6 +1109,7 @@
 				F47599B51A7903C9004A96C1 /* Int+OAuthSwift.swift in Sources */,
 				C42349991DCCE5F600BD980F /* OAuthSwiftResponse.swift in Sources */,
 				F4805E211A6BB5DD00F7677E /* Dictionary+OAuthSwift.swift in Sources */,
+				FCC537591F5FE94F00224DC4 /* OAuthSwiftSha1SigningProtocol.swift in Sources */,
 				F47599B11A79001B004A96C1 /* Data+OAuthSwift.swift in Sources */,
 				C42D41BC1C1AD11600DEDF53 /* UIApplication+OAuthSwift.swift in Sources */,
 				C496246F1B00D6C30010BD09 /* OAuthWebViewController.swift in Sources */,
@@ -1310,21 +1132,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCC537271F5F36EE00224DC4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCC537301F5F36EE00224DC4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FCC5373C1F5F36EF00224DC4 /* CommonCryptoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1342,41 +1149,6 @@
 			isa = PBXTargetDependency;
 			target = F43502791A6791B200038A29 /* OAuthSwift */;
 			targetProxy = F42F57DA1A67F2040064249F /* PBXContainerItemProxy */;
-		};
-		FCC537371F5F36EE00224DC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FCC5372B1F5F36EE00224DC4 /* CommonCrypto */;
-			targetProxy = FCC537361F5F36EE00224DC4 /* PBXContainerItemProxy */;
-		};
-		FCC537391F5F36EF00224DC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F451E3C4195B8CD80051434C /* OAuthSwiftDemo */;
-			targetProxy = FCC537381F5F36EF00224DC4 /* PBXContainerItemProxy */;
-		};
-		FCC537401F5F36EF00224DC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FCC5372B1F5F36EE00224DC4 /* CommonCrypto */;
-			targetProxy = FCC5373F1F5F36EF00224DC4 /* PBXContainerItemProxy */;
-		};
-		FCC537511F5F491F00224DC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FCC5372B1F5F36EE00224DC4 /* CommonCrypto */;
-			targetProxy = FCC537501F5F491F00224DC4 /* PBXContainerItemProxy */;
-		};
-		FCC537531F5F492300224DC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FCC5372B1F5F36EE00224DC4 /* CommonCrypto */;
-			targetProxy = FCC537521F5F492300224DC4 /* PBXContainerItemProxy */;
-		};
-		FCC537551F5F492700224DC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FCC5372B1F5F36EE00224DC4 /* CommonCrypto */;
-			targetProxy = FCC537541F5F492700224DC4 /* PBXContainerItemProxy */;
-		};
-		FCC537571F5F492B00224DC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FCC5372B1F5F36EE00224DC4 /* CommonCrypto */;
-			targetProxy = FCC537561F5F492B00224DC4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1403,7 +1175,6 @@
 /* Begin XCBuildConfiguration section */
 		C40890C51C11B37000E3146A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCC537491F5F371100224DC4 /* CommonCrypto.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1462,7 +1233,6 @@
 		};
 		C48B281B1AFA598D00C7DEF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCC537491F5F371100224DC4 /* CommonCrypto.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1565,7 +1335,6 @@
 		};
 		C4B6EE231BF74CE300443596 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCC537491F5F371100224DC4 /* CommonCrypto.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1666,7 +1435,6 @@
 		};
 		F435028E1A6791B200038A29 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCC537491F5F371100224DC4 /* CommonCrypto.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1864,120 +1632,6 @@
 			};
 			name = Release;
 		};
-		FCC537441F5F36EF00224DC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonCrypto/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "";
-				"MODULEMAP_FILE[sdk=appletvos*]" = "$(SRCROOT)/appletvos.modulemap";
-				"MODULEMAP_FILE[sdk=appletvsimulator*]" = "$(SRCROOT)/appletvsimulator.modulemap";
-				"MODULEMAP_FILE[sdk=iphoneos*]" = "$(SRCROOT)/sources/iphoneos.modulemap";
-				"MODULEMAP_FILE[sdk=iphonesimulator*]" = "$(SRCROOT)/iphonesimulator.modulemap";
-				"MODULEMAP_FILE[sdk=macosx*]" = "$(SRCROOT)/macosx.modulemap";
-				"MODULEMAP_FILE[sdk=watchos*]" = "$(SRCROOT)/watchos.modulemap";
-				"MODULEMAP_FILE[sdk=watchsimulator*]" = "$(SRCROOT)/watchsimulator.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.securebroadcast.commoncrypto.CommonCrypto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FCC537451F5F36EF00224DC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CODE_SIGN_IDENTITY = "";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonCrypto/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "";
-				"MODULEMAP_FILE[sdk=appletvos*]" = "$(SRCROOT)/appletvos.modulemap";
-				"MODULEMAP_FILE[sdk=appletvsimulator*]" = "$(SRCROOT)/appletvsimulator.modulemap";
-				"MODULEMAP_FILE[sdk=iphoneos*]" = "$(SRCROOT)/iphoneos.modulemap";
-				"MODULEMAP_FILE[sdk=iphonesimulator*]" = "$(SRCROOT)/iphonesimulator.modulemap";
-				"MODULEMAP_FILE[sdk=macosx*]" = "$(SRCROOT)/macosx.modulemap";
-				"MODULEMAP_FILE[sdk=watchos*]" = "$(SRCROOT)/watchos.modulemap";
-				"MODULEMAP_FILE[sdk=watchsimulator*]" = "$(SRCROOT)/watchsimulator.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.securebroadcast.commoncrypto.CommonCrypto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FCC537471F5F36EF00224DC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = CommonCryptoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.securebroadcast.commoncrypto.CommonCryptoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OAuthSwiftDemo.app/OAuthSwiftDemo";
-			};
-			name = Debug;
-		};
-		FCC537481F5F36EF00224DC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				INFOPLIST_FILE = CommonCryptoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.securebroadcast.commoncrypto.CommonCryptoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OAuthSwiftDemo.app/OAuthSwiftDemo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2052,22 +1706,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		FCC537431F5F36EF00224DC4 /* Build configuration list for PBXNativeTarget "CommonCrypto" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FCC537441F5F36EF00224DC4 /* Debug */,
-				FCC537451F5F36EF00224DC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		FCC537461F5F36EF00224DC4 /* Build configuration list for PBXNativeTarget "CommonCryptoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FCC537471F5F36EF00224DC4 /* Debug */,
-				FCC537481F5F36EF00224DC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

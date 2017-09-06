@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CommonCrypto
 
 /// Allow to customize computed headers
 public protocol OAuthSwiftCredentialHeadersFactory {
@@ -52,6 +51,7 @@ open class OAuthSwiftCredential: NSObject, NSCoding {
             }
         }
     }
+  
 
     public enum SignatureMethod: String {
         case HMAC_SHA1 = "HMAC-SHA1"//, RSA_SHA1 = "RSA-SHA1", PLAINTEXT = "PLAINTEXT"
@@ -71,6 +71,9 @@ open class OAuthSwiftCredential: NSObject, NSCoding {
             }
         }
     }
+  
+  
+  var oauthSignature: OAuthSwiftSha1SigningProtocol?
 
     // MARK: attributes
     open internal(set) var consumerKey = ""
@@ -239,10 +242,7 @@ open class OAuthSwiftCredential: NSObject, NSCoding {
 
         let signatureBaseString = "\(method)&\(encodedURL)&\(encodedParameterString)"
 
-        let key = signingKey.data(using: .utf8)!
-        let msg = signatureBaseString.data(using: .utf8)!
-
-        let sha1 = self.version.signatureMethod.sign(key: key, message: msg)!
+        let sha1 = oauthSignature!.sign(message: signatureBaseString, key: signingKey)
         return sha1.base64EncodedString(options: [])
     }
 
@@ -256,25 +256,25 @@ open class OAuthSwiftCredential: NSObject, NSCoding {
     }
 }
 
-
-extension String {
-  
-  func urlencode() -> String {
-    let stringToEncode = self.replacingOccurrences(of: " ", with: "+")
-    return stringToEncode.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed)!
-  }
-  
-  func hmacsha1(key: String) -> Data {
-    let dataToDigest = self.data(using: String.Encoding.utf8)
-    let keyData = key.data(using: String.Encoding.utf8)
-    
-    let digestLength = Int(CC_SHA1_DIGEST_LENGTH)
-    let result = UnsafeMutablePointer<Any>.allocate(capacity: digestLength)
-    
-    CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA1), (keyData! as NSData).bytes, keyData!.count, (dataToDigest! as NSData).bytes, dataToDigest!.count, result)
-    
-    return Data(bytes: result, count: digestLength)
-    
-  }
-  
-}
+//
+//extension String {
+//  
+//  func urlencode() -> String {
+//    let stringToEncode = self.replacingOccurrences(of: " ", with: "+")
+//    return stringToEncode.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlHostAllowed)!
+//  }
+//  
+//  func hmacsha1(key: String) -> Data {
+//    let dataToDigest = self.data(using: String.Encoding.utf8)
+//    let keyData = key.data(using: String.Encoding.utf8)
+//    
+//    let digestLength = Int(CC_SHA1_DIGEST_LENGTH)
+//    let result = UnsafeMutablePointer<Any>.allocate(capacity: digestLength)
+//    
+//    CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA1), (keyData! as NSData).bytes, keyData!.count, (dataToDigest! as NSData).bytes, dataToDigest!.count, result)
+//    
+//    return Data(bytes: result, count: digestLength)
+//    
+//  }
+//  
+//}

@@ -24,21 +24,21 @@ open class OAuth1Swift: OAuthSwift {
     var accessTokenUrl: String
 
     // MARK: init
-    public init(consumerKey: String, consumerSecret: String, requestTokenUrl: String, authorizeUrl: String, accessTokenUrl: String) {
+  public init(consumerKey: String, consumerSecret: String, requestTokenUrl: String, authorizeUrl: String, accessTokenUrl: String, oauthSignature: OAuthSwiftSha1SigningProtocol) {
         self.consumerKey = consumerKey
         self.consumerSecret = consumerSecret
         self.requestTokenUrl = requestTokenUrl
         self.authorizeUrl = authorizeUrl
         self.accessTokenUrl = accessTokenUrl
-        super.init(consumerKey: consumerKey, consumerSecret: consumerSecret)
+        super.init(consumerKey: consumerKey, consumerSecret: consumerSecret, oauthSignature: oauthSignature)
         self.client.credential.version = .oauth1
     }
 
-    public convenience override init(consumerKey: String, consumerSecret: String) {
-        self.init(consumerKey: consumerKey, consumerSecret: consumerSecret, requestTokenUrl: "", authorizeUrl: "", accessTokenUrl: "")
+    public convenience override init(consumerKey: String, consumerSecret: String, oauthSignature: OAuthSwiftSha1SigningProtocol) {
+      self.init(consumerKey: consumerKey, consumerSecret: consumerSecret, requestTokenUrl: "", authorizeUrl: "", accessTokenUrl: "", oauthSignature: oauthSignature)
     }
 
-    public convenience init?(parameters: ConfigParameters) {
+    public convenience init?(parameters: ConfigParameters, oauthSignature: OAuthSwiftSha1SigningProtocol) {
         guard let consumerKey = parameters["consumerKey"], let consumerSecret = parameters["consumerSecret"],
             let requestTokenUrl = parameters["requestTokenUrl"], let authorizeUrl = parameters["authorizeUrl"], let accessTokenUrl = parameters["accessTokenUrl"] else {
             return nil
@@ -46,7 +46,7 @@ open class OAuth1Swift: OAuthSwift {
         self.init(consumerKey:consumerKey, consumerSecret: consumerSecret,
           requestTokenUrl: requestTokenUrl,
           authorizeUrl: authorizeUrl,
-          accessTokenUrl: accessTokenUrl)
+          accessTokenUrl: accessTokenUrl, oauthSignature: oauthSignature)
     }
 
     open var parameters: ConfigParameters {

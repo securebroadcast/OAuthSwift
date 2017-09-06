@@ -32,37 +32,36 @@ open class OAuth2Swift: OAuthSwift {
     var contentType: String?
 
     // MARK: init
-    public convenience init(consumerKey: String, consumerSecret: String, authorizeUrl: String, accessTokenUrl: String, responseType: String) {
-        self.init(consumerKey: consumerKey, consumerSecret: consumerSecret, authorizeUrl: authorizeUrl, responseType: responseType)
+    public convenience init(consumerKey: String, consumerSecret: String, authorizeUrl: String, accessTokenUrl: String, responseType: String, oauthSignature: OAuthSwiftSha1SigningProtocol) {
+      self.init(consumerKey: consumerKey, consumerSecret: consumerSecret, authorizeUrl: authorizeUrl, responseType: responseType, oauthSignature: oauthSignature)
         self.accessTokenUrl = accessTokenUrl
     }
 
-    public convenience init(consumerKey: String, consumerSecret: String, authorizeUrl: String, accessTokenUrl: String, responseType: String, contentType: String) {
-        self.init(consumerKey: consumerKey, consumerSecret: consumerSecret, authorizeUrl: authorizeUrl, responseType: responseType)
+    public convenience init(consumerKey: String, consumerSecret: String, authorizeUrl: String, accessTokenUrl: String, responseType: String, contentType: String, oauthSignature: OAuthSwiftSha1SigningProtocol) {
+        self.init(consumerKey: consumerKey, consumerSecret: consumerSecret, authorizeUrl: authorizeUrl, responseType: responseType, oauthSignature: oauthSignature)
         self.accessTokenUrl = accessTokenUrl
         self.contentType = contentType
     }
 
-    public init(consumerKey: String, consumerSecret: String, authorizeUrl: String, responseType: String) {
+    public init(consumerKey: String, consumerSecret: String, authorizeUrl: String, responseType: String, oauthSignature: OAuthSwiftSha1SigningProtocol) {
         self.consumerKey = consumerKey
         self.consumerSecret = consumerSecret
         self.authorizeUrl = authorizeUrl
         self.responseType = responseType
-        super.init(consumerKey: consumerKey, consumerSecret: consumerSecret)
+        super.init(consumerKey: consumerKey, consumerSecret: consumerSecret, oauthSignature: oauthSignature)
         self.client.credential.version = .oauth2
     }
 
-    public convenience init?(parameters: ConfigParameters) {
+    public convenience init?(parameters: ConfigParameters, oauthSignature: OAuthSwiftSha1SigningProtocol) {
         guard let consumerKey = parameters["consumerKey"], let consumerSecret = parameters["consumerSecret"],
               let responseType = parameters["responseType"], let authorizeUrl = parameters["authorizeUrl"] else {
             return nil
         }
         if let accessTokenUrl = parameters["accessTokenUrl"] {
             self.init(consumerKey: consumerKey, consumerSecret: consumerSecret,
-                authorizeUrl: authorizeUrl, accessTokenUrl: accessTokenUrl, responseType: responseType)
+                authorizeUrl: authorizeUrl, responseType: responseType, oauthSignature: oauthSignature)
         } else {
-            self.init(consumerKey: consumerKey, consumerSecret: consumerSecret,
-                authorizeUrl: authorizeUrl, responseType: responseType)
+            self.init(consumerKey: consumerKey, consumerSecret: consumerSecret, authorizeUrl: authorizeUrl, responseType: responseType, oauthSignature: oauthSignature)
         }
     }
 
