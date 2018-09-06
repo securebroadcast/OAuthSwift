@@ -57,7 +57,7 @@ open class OAuth2Swift: OAuthSwift {
               let responseType = parameters["responseType"], let authorizeUrl = parameters["authorizeUrl"] else {
             return nil
         }
-        if let accessTokenUrl = parameters["accessTokenUrl"] {
+        if let _ = parameters["accessTokenUrl"] {
             self.init(consumerKey: consumerKey, consumerSecret: consumerSecret,
                 authorizeUrl: authorizeUrl, responseType: responseType, oauthSignature: oauthSignature)
         } else {

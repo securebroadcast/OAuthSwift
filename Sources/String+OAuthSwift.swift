@@ -46,7 +46,7 @@ extension String {
         var string = self
 
         if hasPrefix(elementSeparator) {
-            string = String(characters.dropFirst(1))
+            string = String(dropFirst(1))
         }
 
         var parameters = [String: String]()
@@ -89,13 +89,17 @@ extension String {
         self.remove(at: self.index(before: self.endIndex))
     }
 
-    func substring(to offset: String.IndexDistance) -> String {
-        return self.substring(to: self.index(self.startIndex, offsetBy: offset))
-    }
+  subscript (bounds: CountableClosedRange<Int>) -> String {
+    let start = index(startIndex, offsetBy: bounds.lowerBound)
+    let end = index(startIndex, offsetBy: bounds.upperBound)
+    return String(self[start...end])
+  }
 
-    func substring(from offset: String.IndexDistance) -> String {
-        return self.substring(from: self.index(self.startIndex, offsetBy: offset))
-    }
+  subscript (bounds: CountableRange<Int>) -> String {
+    let start = index(startIndex, offsetBy: bounds.lowerBound)
+    let end = index(startIndex, offsetBy: bounds.upperBound)
+    return String(self[start..<end])
+  }
 }
 
 extension String.Encoding {
