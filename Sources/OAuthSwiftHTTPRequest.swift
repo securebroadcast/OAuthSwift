@@ -38,7 +38,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
 
     fileprivate var cancelRequested = false
 
-    open static var executionContext: (@escaping () -> Void) -> Void = { block in
+  public static var executionContext: (@escaping () -> Void) -> Void = { block in
       return DispatchQueue.global(qos: .background).async(execute: block)
     }
 
@@ -114,7 +114,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
                     if let response = resp as? HTTPURLResponse {
                         userInfo["Response-Headers"] = response.allHeaderFields
                     }
-                    let error = NSError(domain: OAuthSwiftError.Domain, code: badRequestCode, userInfo: userInfo)
+                  let error = NSError(domain: OAuthSwiftError.Domain, code: badRequestCode, userInfo: userInfo as! [String : Any])
                     failureHandler?(.requestError(error:error, request: usedRequest))
                     return
                 }
@@ -152,7 +152,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
                         userInfo[NSURLErrorFailingURLErrorKey] = urlString
                     }
 
-                    let error = NSError(domain: NSURLErrorDomain, code: response.statusCode, userInfo: userInfo)
+                  let error = NSError(domain: NSURLErrorDomain, code: response.statusCode, userInfo: userInfo as! [String : Any])
                     if error.isExpiredToken {
                         failureHandler?(.tokenExpired(error: error))
                     } else {
@@ -232,7 +232,7 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
         let finalParameters: OAuthSwift.Parameters
         switch paramsLocation {
         case .authorizationHeader:
-            finalParameters = parameters.filter { key, _ in !key.hasPrefix("oauth_") }
+            finalParameters = parameters.filter { $0.key.hasPrefix("oauth_") }
         case .requestURIQuery:
             finalParameters = parameters
         }
