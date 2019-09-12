@@ -232,7 +232,9 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
         let finalParameters: OAuthSwift.Parameters
         switch paramsLocation {
         case .authorizationHeader:
-            finalParameters = parameters.filter { $0.key.hasPrefix("oauth_") }
+          finalParameters = parameters.filteredBy({ (key, value) -> Bool in
+            return !key.contains("oauth_")
+          })
         case .requestURIQuery:
             finalParameters = parameters
         }
