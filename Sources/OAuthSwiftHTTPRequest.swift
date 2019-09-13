@@ -81,11 +81,13 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
             let usedRequest = self.request!
             self.task = self.session.dataTask(with: usedRequest) { (data, resp, error) in
 
-                #if os(iOS)
-                    #if !OAUTH_APP_EXTENSIONS
-                        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                    #endif
-                #endif
+              #if os(iOS)
+              #if !OAUTH_APP_EXTENSIONS
+              DispatchQueue.main.async {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+              }
+              #endif
+              #endif
 
                 // MARK: failure error returned by server
                 if let error = error {
@@ -166,12 +168,14 @@ open class OAuthSwiftHTTPRequest: NSObject, OAuthSwiftRequestHandle {
             }
             self.task?.resume()
             self.session.finishTasksAndInvalidate()
-
-            #if os(iOS)
-                #if !OAUTH_APP_EXTENSIONS
-                    UIApplication.shared.isNetworkActivityIndicatorVisible = self.config.sessionFactory.isNetworkActivityIndicatorVisible
-                #endif
-            #endif
+          
+          #if os(iOS)
+          #if !OAUTH_APP_EXTENSIONS
+          DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = self.config.sessionFactory.isNetworkActivityIndicatorVisible
+          }
+          #endif
+          #endif
         }
     }
 
